@@ -31,9 +31,13 @@ public class comp346pa1driver {
         Client objClient2 = new Client("receiving");            /* Start the receiving client */
         //objClient2.run();
 
-        objNetwork.run();
-        objServer.run();
-        objClient1.run();
-        objClient2.run();
+        Thread t1 = new Thread(objNetwork);
+        Thread t2 = new Thread(objServer);
+        Thread t3 = new Thread(objClient1);
+        Thread t4 = new Thread(objClient2);
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
     }
 }

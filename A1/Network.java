@@ -11,7 +11,7 @@ package COMP_346.A1;
  *
  * @author Kerly Titus
  */
-public class Network {
+public class Network implements Runnable{
 
     private static int maxNbPackets; /* Maximum number of simultaneous transactions handled by the network buffer */
     private static int inputIndexClient, inputIndexServer, outputIndexServer,
@@ -521,14 +521,11 @@ public class Network {
         while (true) {
             /* Implement the code for the run method */
 
-            // Check if the client is connected
-            if(!connect(clientIP)){
+            // Check if the client is connected and the server is connected
+            if(connect(clientIP) && connect(serverIP)){
                 Thread.yield();
-            }
-
-            // Check if the server is connected
-            if(!connect(serverIP)){
-                Thread.yield();
+            } else{
+                break;
             }
         }
     }

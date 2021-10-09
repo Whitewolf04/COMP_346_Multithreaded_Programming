@@ -17,7 +17,7 @@ import java.util.InputMismatchException;
  * @author Kerly Titus
  */
 
-public class Client {
+public class Client implements Runnable{
 
     private static int numberOfTransactions; /* Number of transactions to process */
     private static int maxNbTransactions; /* Maximum number of transactions */
@@ -202,8 +202,47 @@ public class Client {
         long sendClientStartTime, sendClientEndTime, receiveClientStartTime, receiveClientEndTime;
 
         /* Implement the code for the run method */
-        sendTransactions();
-        receiveTransactions(transact);
+
+        // Sending or receiving according to the client operation
+        if(clientOperation.equals("sending")){
+            sendClientStartTime = System.currentTimeMillis();
+
+            while(true){
+                if(objNetwork.getInBufferStatus().equals("full")){
+                    Thread.yield();
+                }
+                sendTransactions();
+
+                if(objNetwork.getInBufferStatus().equals("empty")){
+                    objNetwork.disconnect(objNetwork.getClientIP());
+                    break;
+                }
+            }
+
+            sendClientEndTime = System.currentTimeMillis();
+
+            System.out.println("Terminating client sending thread - Running time " + (sendClientEndTime - sendClientStartTime) + " milliseconds");
+        }
+        
+        if(clientOperation.equals("receiving")){
+            receiveClientEndTime = System.currentTimeMillis();
+
+            while(true){
+                if(objNetwork.getOutBufferStatus().equals("full")){
+                    Thread.yield();
+                }
+                receiveTransactions(transact);
+
+                if(objNetwork.getOutBufferStatus().equals("empty")){
+                    objNetwork.disconnect(objNetwork.getClientIP());
+                    break;
+                }
+            }
+
+            receiveClientStartTime = System.currentTimeMillis();
+
+            System.out.println("Terminating client receiving thread - Running time " + (receiveClientEndTime - receiveClientStartTime) + " milliseconds");
+        }
         
     }
 }
