@@ -1,4 +1,4 @@
-package comp346pa1w2020;
+package COMP_346.A1;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -10,7 +10,7 @@ package comp346pa1w2020;
  *
  * @author Kerly Titus
  */
-public class comp546pa1driver {
+public class comp346pa1driver {
 
     /** 
      * main class
@@ -23,12 +23,17 @@ public class comp546pa1driver {
     	  ******************************************************************************************************************************************/
         
     	Network objNetwork = new Network("network");            /* Activate the network */
-        objNetwork.start();
+        //objNetwork.run();
         Server objServer = new Server();                        /* Start the server */ 
-        objServer.start();
+        //objServer.run();
         Client objClient1 = new Client("sending");              /* Start the sending client */
-        objClient1.start();
+        //objClient1.run();
         Client objClient2 = new Client("receiving");            /* Start the receiving client */
-        objClient2.start();
+        //objClient2.run();
+
+        objNetwork.run();
+        objServer.run();
+        objClient1.run();
+        objClient2.run();
     }
 }

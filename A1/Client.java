@@ -1,4 +1,4 @@
-package comp346pa1w2020;
+package COMP_346.A1;
 
 import java.util.Scanner;
 import java.io.FileInputStream;
@@ -202,7 +202,8 @@ public class Client {
         long sendClientStartTime, sendClientEndTime, receiveClientStartTime, receiveClientEndTime;
 
         /* Implement the code for the run method */
-
+        sendTransactions();
+        receiveTransactions(transact);
         
     }
 }

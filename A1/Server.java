@@ -1,4 +1,4 @@
-package comp346pa1w2020;
+package COMP_346.A1;
 
 import java.util.Scanner;
 import java.io.FileInputStream;
@@ -312,10 +312,13 @@ public class Server {
     {   Transactions trans = new Transactions();
     	long serverStartTime, serverEndTime;
 
+        serverStartTime = System.currentTimeMillis();
     	System.out.println("\n DEBUG : Server.run() - starting server thread " + objNetwork.getServerConnectionStatus());
     	
     	/* Implement the code for the run method */
+        processTransactions(trans);
         
+        serverEndTime = System.currentTimeMillis();
         System.out.println("\n Terminating server thread - " + " Running time " + (serverEndTime - serverStartTime) + " milliseconds");
            
     }
