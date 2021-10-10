@@ -23,21 +23,12 @@ public class comp346pa1driver {
     	  ******************************************************************************************************************************************/
         
     	Network objNetwork = new Network("network");            /* Activate the network */
-        //objNetwork.run();
+        objNetwork.start();
         Server objServer = new Server();                        /* Start the server */ 
-        //objServer.run();
+        objServer.start();
         Client objClient1 = new Client("sending");              /* Start the sending client */
-        //objClient1.run();
+        objClient1.start();
         Client objClient2 = new Client("receiving");            /* Start the receiving client */
-        //objClient2.run();
-
-        Thread t1 = new Thread(objNetwork);
-        Thread t2 = new Thread(objServer);
-        Thread t3 = new Thread(objClient1);
-        Thread t4 = new Thread(objClient2);
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
+        objClient2.start();
     }
 }

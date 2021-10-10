@@ -17,7 +17,7 @@ import java.util.InputMismatchException;
  * @author Kerly Titus
  */
 
-public class Client implements Runnable{
+public class Client extends Thread {
 
     private static int numberOfTransactions; /* Number of transactions to process */
     private static int maxNbTransactions; /* Maximum number of transactions */
@@ -143,8 +143,11 @@ public class Client implements Runnable{
         int i = 0; /* index of transaction array */
 
         while (i < getNumberOfTransactions()) {
-            // while( objNetwork.getInBufferStatus().equals("full") ); /* Alternatively,
-            // busy-wait until the network input buffer is available */
+            while (objNetwork.getInBufferStatus().equals("full")) {
+                Thread.yield();
+            } /*
+               * Alternatively, // busy-wait until the network input buffer is available
+               */
 
             transaction[i].setTransactionStatus("sent"); /* Set current transaction status */
 
@@ -167,8 +170,11 @@ public class Client implements Runnable{
         int i = 0; /* Index of transaction array */
 
         while (i < getNumberOfTransactions()) {
-            // while( objNetwork.getOutBufferStatus().equals("empty")); /* Alternatively,
-            // busy-wait until the network output buffer is available */
+            while (objNetwork.getOutBufferStatus().equals("empty")) {
+                Thread.yield();
+            } /*
+               * Alternatively, // busy-wait until the network output buffer is available
+               */
 
             objNetwork.receive(transact); /* Receive updated transaction from the network buffer */
 
@@ -203,46 +209,23 @@ public class Client implements Runnable{
 
         /* Implement the code for the run method */
 
-        // Sending or receiving according to the client operation
-        if(clientOperation.equals("sending")){
+        if (clientOperation.equals("sending")) {
             sendClientStartTime = System.currentTimeMillis();
-
-            while(true){
-                if(objNetwork.getInBufferStatus().equals("full")){
-                    Thread.yield();
-                }
-                sendTransactions();
-
-                if(objNetwork.getInBufferStatus().equals("empty")){
-                    objNetwork.disconnect(objNetwork.getClientIP());
-                    break;
-                }
-            }
-
+            sendTransactions();
             sendClientEndTime = System.currentTimeMillis();
-
-            System.out.println("Terminating client sending thread - Running time " + (sendClientEndTime - sendClientStartTime) + " milliseconds");
+            System.out.println("\n Terminating client receiving thread - Running time "
+                    + (sendClientEndTime - sendClientStartTime) + " milliseconds");
         }
-        
-        if(clientOperation.equals("receiving")){
-            receiveClientEndTime = System.currentTimeMillis();
 
-            while(true){
-                if(objNetwork.getOutBufferStatus().equals("full")){
-                    Thread.yield();
-                }
-                receiveTransactions(transact);
-
-                if(objNetwork.getOutBufferStatus().equals("empty")){
-                    objNetwork.disconnect(objNetwork.getClientIP());
-                    break;
-                }
-            }
-
+        if (clientOperation.equals("receiving")) {
             receiveClientStartTime = System.currentTimeMillis();
+            receiveTransactions(transact);
+            receiveClientEndTime = System.currentTimeMillis();
+            System.out.println("\n Terminating client receiving thread - Running time "
+                    + (receiveClientEndTime - receiveClientStartTime) + " milliseconds");
 
-            System.out.println("Terminating client receiving thread - Running time " + (receiveClientEndTime - receiveClientStartTime) + " milliseconds");
+            // Finish receiving before disconnect (receving client terminates after sending client)
+            objNetwork.disconnect(objNetwork.getClientIP());
         }
-        
     }
 }

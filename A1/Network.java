@@ -11,7 +11,7 @@ package COMP_346.A1;
  *
  * @author Kerly Titus
  */
-public class Network implements Runnable{
+public class Network extends Thread{
 
     private static int maxNbPackets; /* Maximum number of simultaneous transactions handled by the network buffer */
     private static int inputIndexClient, inputIndexServer, outputIndexServer,
@@ -522,11 +522,13 @@ public class Network implements Runnable{
             /* Implement the code for the run method */
 
             // Check if the client is connected and the server is connected
-            if(connect(clientIP) && connect(serverIP)){
-                Thread.yield();
-            } else{
-                break;
+            Thread.yield();
+            if(clientConnectionStatus.equals("disconnected") && serverConnectionStatus.equals("disconnected")){
+                System.out.println("\n Terminating Network Thread - Client disconnected Server disconnected");
+                System.exit(0);
             }
         }
+
+        // System.out.println("\n Terminating Network Thread - Client disconnected Server disconnected");
     }
 }
