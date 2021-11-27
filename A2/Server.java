@@ -33,7 +33,7 @@ public class Server extends Thread {
     private String serverThreadId; /* Identification of the two server threads - Thread1, Thread2 */
     private static String serverThreadRunningStatus1; /* Running status of thread 1 - idle, running, terminated */
     private static String serverThreadRunningStatus2; /* Running status of thread 2 - idle, running, terminated */
-    private static Semaphore accSem = new Semaphore(1);
+    private static Semaphore accSem = new Semaphore(1); // Semaphore for account database access
 
     /**
      * Constructor method of Client class
@@ -253,10 +253,10 @@ public class Server extends Thread {
 
         /* Process the accounts until the client disconnects */
         while ((!Network.getClientConnectionStatus().equals("disconnected"))) {
-            while ((Network.getInBufferStatus().equals("empty")
-                    && !Network.getClientConnectionStatus().equals("disconnected"))) {
-                Thread.yield(); /* Yield the cpu if the network input buffer is empty */
-            }
+            // while ((Network.getInBufferStatus().equals("empty")
+            //         && !Network.getClientConnectionStatus().equals("disconnected"))) {
+            //     Thread.yield(); /* Yield the cpu if the network input buffer is empty */
+            // }
 
             if (!Network.getInBufferStatus().equals("empty")) {
 
@@ -297,9 +297,9 @@ public class Server extends Thread {
 
                 }
 
-                while (Network.getOutBufferStatus().equals("full")) {
-                    Thread.yield(); /* Yield the cpu if the network output buffer is full */
-                }
+                // while (Network.getOutBufferStatus().equals("full")) {
+                //     Thread.yield(); /* Yield the cpu if the network output buffer is full */
+                // }
 
                 // System.out.println("\n DEBUG : Server.processTransactions() - transferring out account "
                 //         + trans.getAccountNumber());
@@ -329,7 +329,11 @@ public class Server extends Thread {
     public double deposit(int i, double amount) {
         double curBalance; /* Current account balance */
 
-        accSem.acquireUninterruptibly();    /* Acquire the semaphore if critical section is available */
+        try{
+            accSem.acquire();
+        } catch(InterruptedException e){
+
+        }    /* Acquire the semaphore if critical section is available */
 
         curBalance = account[i].getBalance(); /* Get current account balance */
 
@@ -366,7 +370,11 @@ public class Server extends Thread {
     public double withdraw(int i, double amount) {
         double curBalance; /* Current account balance */
 
-        accSem.acquireUninterruptibly();    /* Acquire the semaphore if critical section is available */
+        try{
+            accSem.acquire();
+        } catch(InterruptedException e){
+            
+        }    /* Acquire the semaphore if critical section is available */
 
         curBalance = account[i].getBalance(); /* Get current account balance */
 
@@ -392,7 +400,11 @@ public class Server extends Thread {
     public double query(int i) {
         double curBalance; /* Current account balance */
 
-        accSem.acquireUninterruptibly();
+        try{
+            accSem.acquire();
+        } catch(InterruptedException e){
+            
+        }
 
         curBalance = account[i].getBalance(); /* Get current account balance */
 
