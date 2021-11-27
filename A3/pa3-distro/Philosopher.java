@@ -1,3 +1,5 @@
+import java.util.Random;
+
 import common.BaseThread;
 
 /**
@@ -13,6 +15,8 @@ public class Philosopher extends BaseThread
 	 */
 	public static final long TIME_TO_WASTE = 1000;
 
+	public static Random r = new Random(5);
+
 	/**
 	 * The act of eating.
 	 * - Print the fact that a given phil (their TID) has started eating.
@@ -25,6 +29,7 @@ public class Philosopher extends BaseThread
 	{
 		try
 		{
+			// pw = new PrintWriter(new FileOutputStream("output.txt", true));
 			System.out.println("Philospher " + this.iTID + " has started EATING!");
 			Thread.yield();
 			sleep((long)(Math.random() * TIME_TO_WASTE));
@@ -51,17 +56,18 @@ public class Philosopher extends BaseThread
 	{
 		try
 		{
+			// pw = new PrintWriter(new FileOutputStream("output.txt", true));
 			System.out.println("Philospher " + this.iTID + " has started THINKING!");
 			Thread.yield();
 			sleep((long)(Math.random() * TIME_TO_WASTE));
 			Thread.yield();
 			System.out.println("Philospher " + this.iTID + " has finished THINKING!");
-		} catch(InterruptedException e){
+		}
+		catch(InterruptedException e){
 			System.err.println("Philosopher.think():");
 			DiningPhilosophers.reportException(e);
 			System.exit(1);
 		}
-		
 	}
 
 	/**
@@ -74,6 +80,11 @@ public class Philosopher extends BaseThread
 	 */
 	public void talk()
 	{
+		// try{
+		// 	pw = new PrintWriter(new FileOutputStream("output.txt", true));
+		// } catch(IOException e){
+		// 	System.out.println("File not found");
+		// }
 		System.out.println("Philospher " + this.iTID + " has started TALKING!");
 		Thread.yield();
 		saySomething();
@@ -101,10 +112,14 @@ public class Philosopher extends BaseThread
 			 * A decision is made at random whether this particular
 			 * philosopher is about to say something terribly useful.
 			 */
-			if(true == false)
+			if(r.nextInt(100) % 2 == 0)
 			{
 				// Some monitor ops down here...
+				DiningPhilosophers.soMonitor.requestTalk();
+
 				talk();
+
+				DiningPhilosophers.soMonitor.endTalk();
 				// ...
 			}
 
@@ -127,11 +142,9 @@ public class Philosopher extends BaseThread
 			"My number is " + getTID() + ""
 		};
 
-		System.out.println
-		(
-			"Philosopher " + getTID() + " says: " +
-			astrPhrases[(int)(Math.random() * astrPhrases.length)]
-		);
+		String output = "Philosopher " + getTID() + " says: " + astrPhrases[(int)(Math.random() * astrPhrases.length)];
+
+		System.out.println(output);
 	}
 }
 

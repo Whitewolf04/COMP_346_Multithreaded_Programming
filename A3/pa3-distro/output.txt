@@ -1,0 +1,386 @@
+6
+Input valid! 6 will be used as the number of philosophers!
+
+Philosopher 1 has acquired the chopsticks
+Philosopher 4 has acquired the chopsticks
+6 philosopher(s) came in for a dinner.
+Philospher 1 has started EATING!
+Philospher 4 has started EATING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!       
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 4 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: If thee cannot speak, thee must be silent
+Philospher 3 has finished TALKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!       
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!       
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 1 has finished THINKING!
+Philospher 1 has started TALKING!
+Philosopher 1 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 1 has finished TALKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 3 has finished TALKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 6 has started TALKING!
+Philosopher 6 says: You know, true is false and false is true if you think of it
+Philospher 6 has finished TALKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 2 has finished THINKING!
+Philospher 1 has finished THINKING!
+Philospher 1 has started TALKING!
+Philosopher 1 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 1 has finished TALKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 4 has finished THINKING!
+Philospher 6 has finished THINKING!
+Philospher 6 has started TALKING!
+Philosopher 6 says: You know, true is false and false is true if you think of it
+Philospher 6 has finished TALKING!
+Philospher 5 has finished THINKING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 5 has finished THINKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 3 has finished THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philospher 1 has finished THINKING!
+Philospher 1 has started TALKING!
+Philosopher 1 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 1 has finished TALKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 2 has finished THINKING!
+Philospher 2 has started TALKING!
+Philosopher 2 says: You know, true is false and false is true if you think of it
+Philospher 2 has finished TALKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 4 has finished THINKING!
+Philospher 4 has started TALKING!
+Philosopher 4 says: You know, true is false and false is true if you think of it
+Philospher 4 has finished TALKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 3 has finished TALKING!
+Philospher 1 has finished THINKING!
+Philospher 5 has finished THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philospher 4 has finished THINKING!
+Philospher 4 has started TALKING!
+Philosopher 4 says: If thee cannot speak, thee must be silent
+Philospher 4 has finished TALKING!
+Philospher 2 has finished THINKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 3 has finished TALKING!
+Philospher 1 has finished THINKING!
+Philospher 1 has started TALKING!
+Philosopher 1 says: If thee cannot speak, thee must be silent
+Philospher 1 has finished TALKING!
+Philospher 5 has finished THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 1 has finished THINKING!
+Philospher 1 has started TALKING!
+Philosopher 1 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 1 has finished TALKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 4 has finished THINKING!
+Philospher 4 has started TALKING!
+Philosopher 4 says: If thee cannot speak, thee must be silent
+Philospher 4 has finished TALKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philospher 2 has finished THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 3 has finished TALKING!
+Philospher 1 has finished THINKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 5 has finished THINKING!
+Philospher 5 has started TALKING!
+Philosopher 5 says: My number is 5
+Philospher 5 has finished TALKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 1 has finished THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philospher 2 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philospher 4 has finished THINKING!
+Philospher 4 has started TALKING!
+Philosopher 4 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 4 has finished TALKING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 5 has finished THINKING!
+Philospher 5 has started TALKING!
+Philosopher 5 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 5 has finished TALKING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philospher 3 has finished THINKING!
+Philospher 4 has finished THINKING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 1 has finished THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philosopher 1 has acquired the chopsticks
+Philospher 1 has started EATING!
+Philospher 5 has finished THINKING!
+Philospher 5 has started TALKING!
+Philosopher 5 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 5 has finished TALKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 6 has finished THINKING!
+Philospher 1 has finished EATING!
+Philospher 1 has started THINKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 2 has finished THINKING!
+Philospher 2 has started TALKING!
+Philosopher 2 says: If thee cannot speak, thee must be silent
+Philospher 2 has finished TALKING!
+Philospher 4 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 1 has finished THINKING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 6 has finished THINKING!
+Philospher 6 has started TALKING!
+Philosopher 6 says: My number is 6
+Philospher 6 has finished TALKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 3 has finished THINKING!
+Philospher 3 has started TALKING!
+Philosopher 3 says: If thee cannot speak, thee must be silent
+Philospher 3 has finished TALKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 5 has finished THINKING!
+Philospher 5 has started TALKING!
+Philosopher 5 says: My number is 5
+Philospher 5 has finished TALKING!
+Philospher 2 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 4 has finished THINKING!
+Philosopher 4 has acquired the chopsticks
+Philospher 4 has started EATING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 4 has finished EATING!
+Philospher 4 has started THINKING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 3 has finished THINKING!
+Philosopher 3 has acquired the chopsticks
+Philospher 3 has started EATING!
+Philospher 4 has finished THINKING!
+Philospher 3 has finished EATING!
+Philospher 3 has started THINKING!
+Philospher 2 has finished THINKING!
+Philospher 2 has started TALKING!
+Philosopher 2 says: 2 + 2 = 5 for extremely large values of 2...
+Philospher 2 has finished TALKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 6 has finished THINKING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philosopher 6 has acquired the chopsticks
+Philospher 6 has started EATING!
+Philospher 6 has finished EATING!
+Philospher 6 has started THINKING!
+Philospher 5 has finished THINKING!
+Philosopher 5 has acquired the chopsticks
+Philospher 5 has started EATING!
+Philospher 2 has finished THINKING!
+Philospher 2 has started TALKING!
+Philosopher 2 says: Eh, it's not easy to be a philosopher: eat, think, talk, eat...
+Philospher 2 has finished TALKING!
+Philosopher 2 has acquired the chopsticks
+Philospher 2 has started EATING!
+Philospher 5 has finished EATING!
+Philospher 5 has started THINKING!
+Philospher 2 has finished EATING!
+Philospher 2 has started THINKING!
+Philospher 3 has finished THINKING!
+Philospher 5 has finished THINKING!
+Philospher 5 has started TALKING!
+Philosopher 5 says: My number is 5
+Philospher 5 has finished TALKING!
+Philospher 6 has finished THINKING!
+Philospher 2 has finished THINKING!
+All philosophers have left. System terminates normally.

@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.concurrent.Semaphore;
 
 /**
  * Class Monitor
@@ -14,7 +13,8 @@ public class Monitor
 	 * Data members
 	 * ------------
 	 */
-	ArrayList<Semaphore> chopsticks = new ArrayList<Semaphore>(); 
+	ArrayList<Integer> chopsticks = new ArrayList<Integer>();
+	int speakerAvailable = 1;
 
 
 	/**
@@ -24,8 +24,7 @@ public class Monitor
 	{
 		// TODO: set appropriate number of chopsticks based on the # of philosophers
 		for(int i = 0; i < piNumberOfPhilosophers; i++){
-			Semaphore tempChopstick = new Semaphore(1);
-			chopsticks.add(tempChopstick);
+			chopsticks.add(1);
 		}
 	}
 
@@ -41,7 +40,23 @@ public class Monitor
 	 */
 	public synchronized void pickUp(final int piTID)
 	{
+		int leftChopstick = piTID - 1;
+		int rightChopstick = piTID;
+
+		if(rightChopstick >= chopsticks.size()){
+			rightChopstick = 0;
+		}
 		
+		// Wait until both chopsticks are available
+		while(this.chopsticks.get(leftChopstick) == 0 || this.chopsticks.get(rightChopstick) == 0){
+			try{
+				wait();
+			} catch(InterruptedException e){}
+		}
+		// Chopsticks available
+		this.chopsticks.set(leftChopstick, 0);
+		this.chopsticks.set(rightChopstick, 0);
+		System.out.println("Philosopher " + piTID + " has acquired the chopsticks");
 	}
 
 	/**
@@ -50,7 +65,16 @@ public class Monitor
 	 */
 	public synchronized void putDown(final int piTID)
 	{
-		
+		int leftChopstick = piTID - 1;
+		int rightChopstick = piTID;
+
+		if(rightChopstick >= chopsticks.size()){
+			rightChopstick = 0;
+		}
+
+		this.chopsticks.set(leftChopstick, 1);
+		this.chopsticks.set(rightChopstick, 1);
+		notifyAll();
 	}
 
 	/**
@@ -59,7 +83,14 @@ public class Monitor
 	 */
 	public synchronized void requestTalk()
 	{
-		// ...
+		// Wait until the other speaker has finished talking
+		while(this.speakerAvailable == 0){
+			try{
+				wait();
+			} catch(InterruptedException e){}
+		}
+		// When the last speaker has done talking, lock the speaker slot
+		this.speakerAvailable = 0;
 	}
 
 	/**
@@ -68,7 +99,7 @@ public class Monitor
 	 */
 	public synchronized void endTalk()
 	{
-		// ...
+		this.speakerAvailable = 1;
 	}
 }
 

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Class DiningPhilosophers
  * The main starter.
@@ -46,7 +48,22 @@ public class DiningPhilosophers
 			 * Should be settable from the command line
 			 * or the default if no arguments supplied.
 			 */
+			Scanner sc = new Scanner(System.in);
+			int philosopherNum = -1;
+			String input = sc.next();
+			sc.close();
+
+			if(checkString(input)){
+				philosopherNum = Integer.parseInt(input);
+			}
+
 			int iPhilosophers = DEFAULT_NUMBER_OF_PHILOSOPHERS;
+			if(philosopherNum > 0){
+				iPhilosophers = philosopherNum;
+				System.out.println("Input valid! " + philosopherNum + " will be used as the number of philosophers!\n");
+			} else{
+				System.out.println("Input INVALID! 4 will be used as the number of philosophers!\n");
+			}
 
 			// Make the monitor aware of how many philosophers there are
 			soMonitor = new Monitor(iPhilosophers);
@@ -92,6 +109,16 @@ public class DiningPhilosophers
 		System.err.println("Message          : " + poException.getMessage());
 		System.err.println("Stack Trace      : ");
 		poException.printStackTrace(System.err);
+	}
+
+	public static boolean checkString(String input){
+		try{
+			int temp = Integer.parseInt(input);
+			return true;
+		} catch(NumberFormatException e){
+			System.out.println("\"" + input + "\" is not a positive decimal integer\n");
+		}
+		return false;
 	}
 }
 
